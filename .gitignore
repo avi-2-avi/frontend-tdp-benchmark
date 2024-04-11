@@ -1,0 +1,121 @@
+### Next.js
+
+# dependencies
+/nextjs-proj/node_modules
+/nextjs-proj/.pnp
+/nextjs-proj/.pnp.js
+/nextjs-proj/.yarn/install-state.gz
+
+# testing
+/nextjs-proj/coverage
+
+# next.js
+/nextjs-proj/.next/
+/nextjs-proj/out/
+
+# production
+/nextjs-proj/build
+
+# misc
+/nextjs-proj/.DS_Store
+/nextjs-proj/*.pem
+
+# debug
+/nextjs-proj/npm-debug.log*
+/nextjs-proj/yarn-debug.log*
+/nextjs-proj/yarn-error.log*
+
+# local env files
+/nextjs-proj/.env*.local
+
+# vercel
+/nextjs-proj/.vercel
+
+# typescript
+/nextjs-proj/*.tsbuildinfo
+/nextjs-proj/next-env.d.ts
+
+### Nuxt
+
+# Nuxt dev/build outputs
+/nuxt-proj/.output
+/nuxt-proj/.data
+/nuxt-proj/.nuxt
+/nuxt-proj/.nitro
+/nuxt-proj/.cache
+/nuxt-proj/dist
+
+# Node dependencies
+/nuxt-proj/node_modules
+
+# Logs
+/nuxt-proj/logs
+/nuxt-proj/*.log
+
+# Misc
+/nuxt-proj/.DS_Store
+/nuxt-proj/.fleet
+/nuxt-proj/.idea
+
+# Local env files
+/nuxt-proj/.env
+/nuxt-proj/.env.*
+/nuxt-proj/!.env.example
+
+### Angular
+
+# Compiled output
+/angular-proj/dist
+/angular-proj/tmp
+/angular-proj/out-tsc
+/angular-proj/bazel-out
+
+# Node
+/angular-proj/node_modules
+/angular-proj/npm-debug.log
+/angular-proj/yarn-error.log
+
+# IDEs and editors
+/angular-proj/.idea/
+/angular-proj/.project
+/angular-proj/.classpath
+/angular-proj/.c9/
+/angular-proj/*.launch
+/angular-proj/.settings/
+/angular-proj/*.sublime-workspace
+
+# Visual Studio Code
+/angular-proj/.vscode/*
+/angular-proj/!.vscode/settings.json
+/angular-proj/!.vscode/tasks.json
+/angular-proj/!.vscode/launch.json
+/angular-proj/!.vscode/extensions.json
+/angular-proj/.history/*
+
+# Miscellaneous
+/angular-proj/.angular/cache
+/angular-proj/.sass-cache/
+/angular-proj/connect.lock
+/angular-proj/coverage
+/angular-proj/libpeerconnection.log
+/angular-proj/testem.log
+/angular-proj/typings
+
+# System files
+/angular-proj/.DS_Store
+/angular-proj/Thumbs.db
+
+### Svelte
+
+/svelte-proj/.DS_Store
+/svelte-proj/node_modules
+/svelte-proj/build
+/svelte-proj/.svelte-kit
+/svelte-proj/package
+/svelte-proj/.env
+/svelte-proj/.env.*
+/svelte-proj/!.env.example
+/svelte-proj/.vercel
+/svelte-proj/.output
+/svelte-proj/vite.config.js.timestamp-*
+/svelte-proj/vite.config.ts.timestamp-*
