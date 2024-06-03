@@ -1,0 +1,33 @@
+<main>
+  <button (click)="addSquares()">Add Squares</button>
+
+  <p>FPS: {{ fps }}</p>
+  <p>
+    Render Time:
+    {{ renderTime !== null ? renderTime.toFixed(2) + "ms" : "N/A" }}
+  </p>
+  <div
+    [ngStyle]="{
+      display: 'grid',
+      gridTemplateColumns: 'repeat(' + numSquares + ', 1fr)',
+      gridTemplateRows: 'repeat(' + numSquares + ', 1fr)',
+      width: '100vw',
+      height: '100vh'
+    }"
+  >
+    <ng-container *ngIf="renderSquares() as squares">
+      <div
+        *ngFor="let square of squares"
+        [ngStyle]="{
+          width: square.width + 'px',
+          height: square.height + 'px'
+        }"
+      >
+        <app-square
+          [width]="square.width"
+          [height]="square.height"
+        ></app-square>
+      </div>
+    </ng-container>
+  </div>
+</main>
