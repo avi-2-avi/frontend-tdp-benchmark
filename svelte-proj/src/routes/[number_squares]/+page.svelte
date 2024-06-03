@@ -9,6 +9,10 @@
   const fps = writable<number>(0);
   let squares: any[] = [];
 
+  let frameCount = 0;
+  let lastTime = performance.now();
+  let animationFrameRef: number;
+
   onMount(() => {
     numSquares.set(Number(get(page).params.number_squares));
 
@@ -30,6 +34,31 @@
     });
 
     updateSquares(); // Initialize squares on mount
+  });
+
+  onMount(() => {
+    const animate = () => {
+      frameCount += 1;
+      const currentTime = performance.now();
+      const deltaTime = currentTime - lastTime;
+
+      if (deltaTime >= 1000) {
+        const currentFPS = (frameCount / deltaTime) * 1000;
+        fps.set(parseFloat(currentFPS.toFixed(2)));
+        frameCount = 0;
+        lastTime = currentTime;
+      }
+
+      animationFrameRef = requestAnimationFrame(animate);
+    };
+
+    animationFrameRef = requestAnimationFrame(animate);
+
+    return () => {
+      if (animationFrameRef) {
+        cancelAnimationFrame(animationFrameRef);
+      }
+    };
   });
 
   const addSquares = () => {
